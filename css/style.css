@@ -26,11 +26,13 @@ p {
     white-space: pre-line;
 }
 
+/* BOTÕES */
 button {
-    margin-top: 20px;
-    padding: 14px;
-    font-size: 16px;
-    width: 100%;
+    margin-top: 14px;
+    padding: 10px 14px;
+    font-size: 14px;
+    width: 85%;
+    max-width: 240px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -44,9 +46,20 @@ button {
 .nao {
     background-color: #f44336;
     color: white;
-    position: fixed;
+    position: absolute;
+    top: 90px; /* garante que não sobre o SIM */
 }
 
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 160px; /* espaço suficiente para o NÃO fugir */
+    margin-top: 10px;
+}
+/* CORAÇÕES */
 .coracao {
     position: fixed;
     bottom: -20px;
@@ -62,5 +75,17 @@ button {
     to {
         transform: translateY(-100vh);
         opacity: 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+    p {
+        font-size: 15px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 9px 12px;
     }
 }
